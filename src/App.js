@@ -31,7 +31,8 @@ import "bootstrap/dist/js/bootstrap.bundle.js";
 import './App.css'
 
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
+ 
   Route,
   Routes,
 } from "react-router-dom";
@@ -40,39 +41,44 @@ import {FirebaseProvider} from "./Firebase";
 export default function App(){
   return(
     <FirebaseProvider>
+       
       <Router>
-        <Routes>
+     
+       <Routes>
         
-          <Route path="/instaclone" element={<LoginPage />} />
-          <Route path="/SignUpPage" element={<SignUpPage />} />
-          <Route path="/HomePage" element={<HomePage />} />
-          <Route path="/NotificationSecond" element={<NotificationSecond />} />
-          <Route path="/ZZZ" element={<ZZZ />} />
-          <Route path="/EditProfile3" element={<EditProfile3 />} />
-          <Route path="/BirthPage" element={<BirthPage />} />
-          <Route path="/SearchEx" element={<SearchEx />} />
-          <Route path="/OtpPage" element={<OtpPage />} />
-          <Route path="/EmailPage" element={<EmailPage />} />
-          <Route path="/Suggesion" element={<Suggesion />} />
-          <Route path="/SearchPage" element={<SearchPage />} />
-          <Route path="/MainProfile" element={<MainProfile />} />
-          <Route path="/EditProfile" element={<EditProfile />} />
-          <Route path="/FollowersPage" element={<FollowersPage />} />
-          <Route path="/SearchFollowers" element={<SearchFollowers />} />
-          <Route path="/SearchFollowing" element={<SearchFollowing />} />
-          <Route path="/ActiveSettingpage" element={<ActiveSettingpage />} />
-          <Route path="/CreateStory" element={<CreateStory />} />
-          <Route path="/SeeAll" element={<SeeAll />} />
-          <Route path="/CreatePost" element={<CreatePost />} />
-          <Route path="/Save" element={<Save />} />
-          <Route path="/ReelSecond/:id/:reelsId" element={<ReelSecond />} />
-          <Route path="/ReelPage" element={<ReelPage />} />
-          <Route path="/Explore" element={<Explore />} />
-          <Route path="/StoryPage/:id" element={<StoryPage />} />
-          <Route path="/HandleReelPost/:id/:postId" element={<HandleReelPost />} />
-          <Route path="/SearchProfile/:id" element={<SearchProfile />} />
-        </Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/instaclone" element={<LoginPage />} />
+        <Route path="/SignUpPage" element={<SignUpPage />} />
+        <Route path="/HomePage" element={<HomePage />} />
+        <Route path="/NotificationSecond" element={<NotificationSecond />} />
+        <Route path="/ZZZ" element={<ZZZ />} />
+        <Route path="/EditProfile3" element={<EditProfile3 />} />
+        <Route path="/BirthPage" element={<BirthPage />} />
+        <Route path="/SearchEx" element={<SearchEx />} />
+        <Route path="/OtpPage" element={<OtpPage />} />
+        <Route path="/EmailPage" element={<EmailPage />} />
+        <Route path="/Suggesion" element={<Suggesion />} />
+        <Route path="/SearchPage" element={<SearchPage />} />
+        <Route path="/MainProfile" element={<MainProfile />} />
+        <Route path="/EditProfile" element={<EditProfile />} />
+        <Route path="/FollowersPage" element={<FollowersPage />} />
+        <Route path="/SearchFollowers" element={<SearchFollowers />} />
+        <Route path="/SearchFollowing" element={<SearchFollowing />} />
+        <Route path="/ActiveSettingpage" element={<ActiveSettingpage />} />
+        <Route path="/CreateStory" element={<CreateStory />} />
+        <Route path="/SeeAll" element={<SeeAll />} />
+        <Route path="/CreatePost" element={<CreatePost />} />
+        <Route path="/Save" element={<Save />} />
+        <Route path="/ReelSecond/:id/:reelsId" element={<ReelSecond />} />
+        <Route path="/ReelPage" element={<ReelPage />} />
+        <Route path="/Explore" element={<Explore />} />
+        <Route path="/StoryPage/:id" element={<StoryPage />} />
+        <Route path="/HandleReelPost/:id/:postId" element={<HandleReelPost />} />
+        <Route path="/SearchProfile/:id" element={<SearchProfile />} />
+      </Routes>
+    
       </Router>
+       
     </FirebaseProvider>
   )
 }

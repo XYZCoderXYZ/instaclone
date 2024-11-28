@@ -9,7 +9,7 @@ export default function EditProfile(){
     const navigate=useNavigate();
     const handleLogOut= async()=>{
         await firebase.logout();
-        navigate('/');
+        navigate('/instaclone');
 
       }
     return(
